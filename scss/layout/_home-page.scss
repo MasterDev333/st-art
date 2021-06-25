@@ -1,0 +1,542 @@
+.about-st-art,
+.curators-selection-section,
+.discover-our-media-section,
+.featured-artists-section,
+.video-tutorials-section {
+  padding: 50px 0;
+}
+
+.latest-news,
+.curators-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+
+  @include respond-min(991) {
+    padding: 0 60px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    text-align: center;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 23px;
+    line-height: 1.4;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__block {
+    @media screen and (min-width: $screen-md) {
+      display: grid;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      grid-column-gap: 94px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .product-card {
+    &__title {
+      line-height: 1.4;
+      @media screen and (max-width: $screen-md) {
+        font-size: 18px;
+        line-height: 1.55;
+      }
+    }
+
+    & + .product-card {
+      @media screen and (max-width: $screen-md) {
+        margin-top: 50px;
+      }
+    }
+
+    &__price,
+    &__artist {
+      @media screen and (max-width: $screen-md) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.latest-news {
+  display: block;
+  padding: 0;
+
+  @include respond-min(768) {
+    display: flex;
+  }
+
+  &__block {
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      width: 28px;
+      height: 28px;
+      transform: translateY(-50%);
+      z-index: 5;
+      cursor: pointer;
+
+      &-prev {
+        left: 0;
+      }
+
+      &-next {
+        right: 0;
+      }
+    }
+  }
+
+  .post-card {
+    @include respond-max(767) {
+      padding: 0 40px;
+    }
+
+    &__excerpt,
+    &__title {
+      @media screen and (max-width: $screen-md) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.discover-our-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 25px;
+
+  @include respond-min(991) {
+    padding: 0 60px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 23px;
+    } 
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+    @include respond-min(370) {
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+    }
+
+    @media screen and (min-width: 991px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 50px;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 63px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 275px;
+    margin-bottom: 17px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__card-title {
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: #060708;
+    line-height: 1.55;
+
+    @media screen and (min-width: $screen-md) {
+      font-size: 23px;
+      line-height: 1.4;
+    }
+  }
+}
+
+.featured-artists {
+  &__title {
+    margin-bottom: 25px;
+    text-align: center;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 23px;
+    } 
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 23px;
+    line-height: 1.4;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 18px;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    } 
+  }
+
+  &__block {
+    position: relative;
+    padding: 0 30px;
+
+    @media screen and (min-width: $screen-md) {
+      padding: 0 50px;
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+
+      @media screen and (min-width: $screen-md) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .slider-button-prev {
+      left: 0;
+
+      @media screen and (min-width: $screen-md) {
+        left: 15px;
+      }
+    }
+
+    .slider-button-next {
+      right: 0;
+
+      @media screen and (min-width: $screen-md) {
+        right: 15px;
+      }
+    }
+
+    .artist-card {
+      margin: 0 10px;
+
+      @media screen and (min-width: $screen-md) {
+        margin: 0 20px;
+      }
+
+      @media screen and (min-width: $screen-lg) {
+        margin: 0 44px;
+      }
+    }
+  }
+}
+
+.video-tutorials {
+  &__title {
+    margin-bottom: 25px;
+    text-align: center;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 23px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 23px;
+    line-height: 1.4;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+  }
+
+  &__image {
+    margin: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: $screen-md) {
+      margin: 0 22px;
+    }
+
+    iframe {
+      width: 100%;
+      pointer-events: none;
+
+      @media screen and (min-width: $screen-sm) {
+        min-height: 170px;
+      }
+
+      @media screen and (min-width: $screen-lg) {
+        min-width: 466px;
+        min-height: 262px;
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    margin: 0 -15px;
+
+    .slick-slide {
+      margin-left: 58px;
+      margin-right: 58px;
+
+      @media screen and (min-width: 576px) {
+        margin-left: 22px;
+        margin-right: 22px;
+      }
+    }
+
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+
+      @media screen and (min-width: $screen-md) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .slider-button-prev {
+      left: 15px;
+
+      @media screen and (min-width: $screen-md) {
+        left: 30px;
+      }
+    }
+
+    .slider-button-next {
+      right: 15px;
+
+      @media screen and (min-width: $screen-md) {
+        right: 30px;
+      }
+    }
+
+    .artist-card {
+      margin: 0 10px;
+    }
+  }
+}
+
+.video-tutorials-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px 15px;
+
+  @include respond-min(991) {
+    padding: 50px 30px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 20;
+
+    @media screen and (min-height: 790px) {
+      top: 60px;
+    }
+  }
+
+  &__iframe {
+    width: 100%;
+    padding: 56% 20px 0;
+    height: auto;
+    position: relative;
+    max-width: 1048px;
+    margin: 0 auto;
+    background-color: #ccc;
+
+    @include respond-min(991) {
+      height: 590px;
+      padding: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+.cta-carousel {
+  &__slide {
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: relative;
+    padding: 68px 20px 68px 53px;
+
+    @media screen and (min-width: $screen-md) {
+      height: calc(100vh - 66px);
+      padding: 68px 100px 68px 100px;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      padding: 68px 200px 68px 200px;
+    }
+  }
+
+  &__slide-content {
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1400px;
+
+    @media screen and (min-width: $screen-md) {
+      justify-content: center;
+    }
+  }
+
+  .slider-button {
+    z-index: 2;
+    top: 50%;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: $screen-md) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .slider-button-prev {
+    left: 14px;
+
+    @media screen and (min-width: $screen-md) {
+      left: 30px;
+    }
+  }
+
+  .slider-button-next {
+    right: 15px;
+
+    @media screen and (min-width: $screen-md) {
+      right: 30px;
+    }
+  }
+
+  &__image {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__button,
+  &__title {
+    z-index: 2;
+    align-self: flex-start;
+    position: relative;
+  }
+
+  &__title {
+    max-width: 466px;
+    margin-bottom: 41px;
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .color-black {
+    color: #060708;
+  }
+
+  .color-white {
+    color: #fff;
+  }
+}

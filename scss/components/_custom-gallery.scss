@@ -1,0 +1,33 @@
+.custom-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
+
+  @include respond-max(767) {
+    margin-left: -38px;
+    margin-right: -38px;
+  }
+
+  picture {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+    @include respond-min(768) {
+      max-width: calc(50% - 35px);
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    &:nth-child(2n - 1) {
+      @include respond-min(768) {
+        margin-right: 35px;
+      }
+    }
+
+    img {
+      display: block;
+    }
+  }
+}

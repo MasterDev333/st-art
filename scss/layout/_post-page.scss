@@ -1,0 +1,130 @@
+.post-page {
+  &__inner {
+    padding: 25px 18px 25px;
+
+    @include respond-min(768) {
+      padding: 25px 0 75px; 
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 68px;
+    max-width: 789px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond-max(767) {
+      font-size: 23px;
+      line-height: 1.3;
+      margin-bottom: 50px;
+      text-align: left;
+    }
+  }
+
+  &__content {
+    max-width: 730px;
+    margin: auto;
+
+    a {
+      color: #3A56A5;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 400;
+      margin-bottom: 28px;
+
+      strong {
+        font-weight: 600;
+      }
+
+      &:first-child {
+        &:first-letter {
+          font-size: 100px;
+        }
+      }
+    }
+
+    .wp-block-gallery {
+      padding: 22px 0 30px;
+
+      .block-gallery-grid {
+
+      }
+    }
+  }
+
+  &__tags {
+    max-width: 730px;
+    margin: auto;
+    padding: 22px 0 10px;
+
+    @include respond-min(768) {
+      padding: 72px 0 25px;
+    }
+
+    span {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 15px;
+
+      @include respond-min(768) {
+        width: auto;
+        margin-bottom: 0;
+        left: 0;
+        top: 0;
+        position: absolute;
+      }
+    }
+
+    p {
+      position: relative;
+      font-size: 23px;
+      line-height: 28px;
+      font-weight: 400;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include respond-min(768) {
+        padding-left: 53px;
+      }
+
+      a {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        color: $blackColor-2;
+        margin-bottom: 15px;
+        padding-left: 0;
+        padding-right: 27px;
+        text-decoration: underline;
+
+        @include respond-min(768) {
+          padding-left: 37px;
+          padding-right: 0;
+          margin-bottom: 10px;
+        }
+
+        @include respond-max(767) {
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__share {
+    padding: 25px 0 25px;
+    max-width: 730px;
+    margin: auto;
+
+    p {
+      font-size: 23px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+  }
+}

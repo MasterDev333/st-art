@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+  &.blocked {
+    overflow: hidden;
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &--padding {
+    padding: 0 15px;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+#wpadminbar {
+  //display: none;
+}
+
+.section-404 {
+  padding: 50px 0;
+
+  @media screen and (min-width: $screen-md) {
+    padding: 146px 0 100px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 57px;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+
+    svg {
+      max-width: 100%;
+    }
+  }
+
+  &__back-home {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 13px 27px;
+    background-color: #3a56a5;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 220px;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: darken(#3a56a5, 15%);
+    }
+  }
+}
+
+.cookie-btn {
+  border-radius: 0 !important;
+  color: #282561 !important;
+  background-color: #eaebec !important;
+  text-transform: uppercase !important;
+}
+
+.cookie-pp-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.wp-block-buttons {
+  padding: 25px 38px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $screen-md) {
+    display: block;
+  }
+
+  .wp-block-button {
+    margin-right: 0;
+
+    @media screen and (min-width: $screen-md) {
+      margin-right: 47px;
+    }
+  }
+
+}
+
+.wp-block-button__link {
+  border-radius: 0;
+}
+
+.wp-block-button__link,
+.st-button {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 14px 14px;
+  background-color: #3a56a5;
+
+  &:hover {
+    background-color: darken(#3a56a5, 15%);
+  }
+
+  @media screen and (min-width: $screen-md) {
+    font-size: 24px;
+    padding: 20px 34px;
+  }
+}
+
+.share-block {
+  display: flex;
+  font-size: 23px;
+}
+
+.addtoany_list a img {
+  width: 19px;
+  height: 19px;
+}
+
+.addtoany_list a, .widget .addtoany_list a {
+  padding: 0 !important;
+  width: 19px;
+  height: 19px;
+  margin-left: 25px;
+}

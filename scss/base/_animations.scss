@@ -1,0 +1,11 @@
+@-webkit-keyframes move-on-hover {
+  0%, 100% {
+    @include translateY(0);
+  }
+  25%, 75% {
+    @include translateY(3px);
+  }
+  50% {
+    @include translateY(2px);
+  }
+}

@@ -1,0 +1,38 @@
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: $whiteColor;
+
+  @media (min-width: 880px) {
+    height: 150px;
+  }
+
+  &:first-child {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  &.shown {
+    display: flex;
+  }
+
+  .loader {
+    border: 7px solid $whiteColor; /* Light grey */
+    border-top: 7px solid $blackColor-2; /* Blue */
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+  }
+}

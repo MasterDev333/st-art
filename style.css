@@ -1,0 +1,40 @@
+/*
+Theme Name: st-Art
+Theme URI:
+Author: Studio Lutalica
+Author URI: https://lutalica.studio/
+*/
+.single-product img[data-src] {
+	opacity: 1;
+	transform: none;
+}
+.our-team .our-team-card__image {
+	max-height: 350px;
+	max-width: 350px;
+	overflow: hidden;
+}
+.our-team .our-team-card__image img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+.custom-info__desc p {
+	line-height: 33px;
+}
+.tribe-events-single ul.tribe-related-events li .tribe-related-events-thumbnail {
+	padding: 0;
+}
+.tribe-events-single ul.tribe-related-events li .tribe-related-event-info {
+	justify-content: center;
+}
+.tribe_events .tribe-events-single-event-description a {
+	border-bottom: 0;
+}
+.custom-info__desc ul li {
+	padding-left: 0;
+	font-size: 18px;
+	line-height: 33px;
+}
+#tribe-events-content a:not(.st-button) {
+	color: #3a56a5;
+}

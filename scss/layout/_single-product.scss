@@ -1,0 +1,292 @@
+.single-product {
+  &__inner {
+    padding: 25px 23px 50px;
+
+    @include respond-min(991) {
+      padding: 31px 60px 75px;
+    }
+  }
+}
+
+a[href="http://www.magictoolbox.com/magiczoomplus/"] {
+  display: none;
+}
+
+.product {
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 35px;
+
+    .seperator {
+      &:last-of-type {
+        display: none;
+      }
+    }
+
+    @include respond-min(991) {
+      grid-template-columns: 680fr 534fr;
+    }
+
+    @include respond-min(1200) {
+      grid-template-columns: 754fr 460fr;
+      grid-column-gap: 75px;
+    }
+  }
+
+  &__image-wrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-min(991) {
+      display: flex;
+    }
+
+    &--mobile {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 50px;
+
+      @include respond-min(991) {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+
+    &-img {
+      display: block;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__title {
+    @include respond-max(599) {
+      font-size: 23px;
+      line-height: 28px;
+    }
+  }
+
+  &__artist {
+    margin-top: 25px;
+    color: $blackColor-2;
+
+    @include respond-max(599) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include respond-min(991) {
+      margin-top: 20px;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__category {
+    padding-right: 20px;
+    padding-top: 16px;
+
+    @include respond-max(599) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__price {
+    margin-top: 50px;
+
+    @include respond-max(599) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__view-link {
+    margin-top: 63px;
+    text-decoration: underline;
+    color: $blackColor-2;
+
+    @include respond-max(599) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 50px;
+    }
+  }
+
+  &__buy {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+
+    button {
+      background-color: $blueColor;
+      color: $whiteColor-2;
+      padding: 14px 25px 14px 26px;
+      border: 1px solid $blueColor;
+      border-radius: 0;
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 600;
+
+      @include respond-min(600) {
+        font-size: 24px;
+        line-height: 29px;
+        padding: 19px 38px 20px 37px;
+      }
+    }
+  }
+
+  .sold-out-button {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $blueColor;
+    background-color: $whiteColor-2;
+    padding: 20px 37px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 50px;
+    }
+  }
+
+  &__rent {
+    p {
+      font-size: 23px;
+      line-height: 28px;
+      font-weight: 400;
+
+      @include respond-max(599) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    a {
+      font-size: 23px;
+      line-height: 28px;
+      font-weight: 600;
+      color: $blueColor;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+
+      @include respond-max(599) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      svg {
+        margin-left: 18px;
+
+        @include respond-min(600) {
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 44px;
+    display: grid;
+    grid-row-gap: 50px;
+
+    @include respond-min(600) {
+      grid-row-gap: 75px;
+      padding-top: 44px;
+    }
+  }
+
+  &__information {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 77px;
+    grid-row-gap: 31px;
+
+    @include respond-min(991) {
+      grid-template-columns: 1fr 1.5fr;
+    }
+  }
+
+  &__info-col {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-column-gap: 32px;
+
+    @include respond-min(600) {
+      grid-template-columns: 130px 1fr;
+    }
+
+    p, & > div {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+      padding: 14px 0;
+
+      @include respond-min(600) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    &--mobile-wrap {
+      grid-template-columns: 1fr;
+
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        padding: 8px 0;
+
+        @include respond-min(600) {
+          font-size: 18px;
+          line-height: 28px;
+          padding: 14px 0;
+        }
+      }
+
+      @include respond-min(600) {
+        grid-template-columns: 130px 1fr;
+      }
+    }
+  }
+
+  &__compare {
+
+    &-image {
+      max-width: 1048px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+
+      .placeholder {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .picture {
+        display: block;
+        position: absolute;
+        top: calc(88% / 2);
+        right: calc(78% / 2);
+        transform: translate(50%, -50%);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+    }
+  }
+}

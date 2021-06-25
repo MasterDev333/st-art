@@ -1,0 +1,92 @@
+h1, .h1 {
+  font-size: 30px;
+  line-height: 1.2;
+
+  @media screen and (min-width: 991px) {
+    font-size: 54px;
+  }
+}
+
+a {
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-size: 28px;
+
+  @media screen and (min-width: 991px) {
+    font-size: 42px;
+  }
+
+  &.h2--bold{
+
+  }
+
+  @include respond-min(992) {
+
+  }
+  @include respond-min(1200) {
+
+  }
+}
+
+h3, .h3 {
+  font-size: 23px;
+  line-height: 1.215;
+  font-weight: 600;
+
+  @include respond-min(992) {
+    font-size: 36px;
+  }
+}
+
+h4, .h4 {
+  font-size: 23px;
+  line-height: 1.215;
+  font-weight: 400;
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+h5, .h5 {
+  font-size: 20px;
+  line-height: 1.215;
+  font-weight: 400;
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+p {
+  &.p--larger {
+
+  }
+  &.p--large {
+
+  }
+  &.p--small {
+
+  }
+  &.p--introduction{
+
+  }
+
+  @include respond-min(1200) {
+    &.p--larger {
+
+    }
+    &.p--large {
+
+    }
+    &.p--introduction{
+
+    }
+  }
+}
+
+.text--bold{
+
+}

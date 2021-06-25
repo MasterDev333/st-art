@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Archia";
+  font-style: "normal";
+  font-weight: 400;
+  src: url("../fonts/Archia/Archia-Regular.woff") format("woff");
+}
+body.login {
+  font-family: "Archia", sans-serif;
+}
+body.login label {
+}
+body.login div#login {
+}
+body.login div#login h1 {
+}
+body.login div#login h1 a {
+  height: 60px;
+  width: 200px;
+}
+body.login div#login form#loginform,
+form#lostpasswordform {
+  background: white;
+  border: 1px solid white;
+  color: #060708;
+  border-radius: 5px;
+}
+body.login div#login form#loginform p {
+}
+body.login div#login form#loginform p label {
+}
+body.login div#login form#loginform input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #060708;
+  color: #060708;
+  border-radius: 0;
+}
+body.login div#login form#loginform input:focus {
+  border-color: #060708;
+  box-shadow: none;
+  outline: none;
+}
+body.login div#login form#lostpasswordform input:focus {
+  border-color: #060708;
+  box-shadow: none;
+  outline: none;
+}
+body.login div#login form#loginform input#user_login {
+}
+body.login div#login form#loginform input#user_login:focus {
+  border-color: #060708;
+  box-shadow: none;
+  outline: none;
+}
+body.login div#login form#loginform input#user_pass:focus {
+  border-color: #060708;
+  box-shadow: none;
+  outline: none;
+}
+body.login div#login form#loginform p.forgetmenot {
+}
+body.login div#login form#loginform p.forgetmenot input#rememberme {
+  border: 1px solid #060708;
+}
+body.login div#login form#loginform p.submit {
+}
+body.login div#login form#loginform p.submit input#wp-submit,
+body.login div#login form#lostpasswordform p.submit input#wp-submit {
+  background: #3a56a5;
+  color: white;
+  border: 1px solid #3a56a5;
+  outline: none;
+  text-shadow: none;
+  box-shadow: none;
+  transition: all ease-in-out 0.3s;
+}
+body.login div#login form#loginform p.submit input#wp-submit:hover,
+body.login div#login form#lostpasswordform p.submit input#wp-submit:hover {
+  background: #060708;
+  border-color: #060708;
+  color: white;
+  transition: all ease-in-out 0.3s;
+}
+body.login div#login p#nav,
+body.login div#login p#backtoblog {
+}
+body.login div#login p#nav a {
+  color: #060708;
+}
+body.login div#login p#backtoblog a {
+  color: #060708;
+}
+.login .button.wp-hide-pw {
+  color: #060708;
+}
+.login #login_error {
+  border-left-color: #060708;
+}
+.login .message,
+.login .success {
+  border-left: 4px solid #000;
+}
+
+.privacy-policy-link {
+  color: #060708;
+}

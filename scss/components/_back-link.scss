@@ -1,0 +1,38 @@
+.back-link {
+  &__inner {
+    padding: 54px 0 25px;
+
+    @include respond-min(991) {
+      padding: 57px 60px 30px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 22px;
+    padding-right: 30px;
+    color: $blackColor-2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: max-content;
+
+    @include respond-min(991) {
+      font-size: 23px;
+      line-height: 28px;
+    }
+
+    svg {
+      transform: rotate(180deg);
+      margin-right: 21px;
+      width: 20px;
+      height: 20px;
+
+      @include respond-min(991) {
+        width: 28px;
+        height: 28px;
+        margin-right: 17px;
+      }
+    }
+  }
+}

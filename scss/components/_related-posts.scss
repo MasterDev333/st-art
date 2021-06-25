@@ -1,0 +1,98 @@
+.related-posts {
+  overflow: hidden;
+
+  &__title {
+    margin-top: 50px;
+    text-align: center;
+
+    @media (max-width: 990px) {
+      font-size: 23px;
+      line-height: 28px;
+    }
+  }
+
+  &__list {
+    .product-card {
+      margin: 50px 31px;
+    }
+
+    &--artists,
+    &--artworks {
+      .slider-button {
+        position: absolute;
+        //top: 50%;
+        //transform: translateY(-50%);
+        z-index: 5;
+        cursor: pointer;
+
+        @include respond-max(767) {
+          width: 28px;
+          height: 28px;
+          margin-top: 20px;
+        }
+
+        &-prev {
+          left: 0;
+        }
+
+        &-next {
+          right: 0;
+        }
+      }
+    }
+
+    &--artworks {
+      .slick-list {
+        overflow: visible !important;
+      }
+    }
+
+    &--artists {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .artist-card {
+        width: 100%;
+        padding: 25px 40px;
+
+        @include respond-min(768) {
+          width: 50%;
+        }
+
+        @include respond-min(1024) {
+          width: 33%;
+          padding: 50px 31px;
+        }
+
+        @include respond-min(1200) {
+          padding: 50px 62px;
+        }
+      }
+    }
+
+    &--events {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .event-card {
+        width: 100%;
+        padding: 25px 25px;
+
+        @include respond-min(650) {
+          width: 50%;
+        }
+
+        @include respond-min(1024) {
+          width: 33%;
+          padding: 50px 25px;
+        }
+
+        @include respond-min(1200) {
+          padding: 50px 47px;
+        }
+      }
+    }
+  }
+}

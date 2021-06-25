@@ -1,0 +1,12 @@
+@import "../abstracts/custom-variables";
+
+@font-face {
+  font-family: 'Archia';
+  src:url('#{$fontsUrl}Archia/Archia-Regular.woff2') format('woff2'),
+  url('#{$fontsUrl}Archia/Archia-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+

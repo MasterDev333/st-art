@@ -1,0 +1,294 @@
+.contact-us,
+.faq {
+  padding: 50px 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__description {
+    margin-bottom: 50px;
+    max-width: 765px;
+    text-align: center;
+  }
+}
+
+.contact-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+
+  @media screen and (min-width: $screen-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: $screen-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    grid-column-gap: 66px;
+    grid-row-gap: 68px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: #3a56a5;
+
+    svg {
+      margin-left: 15px;
+    }
+  }
+}
+
+.faq-accordeon {
+  max-width: 1055px;
+  //border: 1px solid #060708;
+  width: 100%;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #060708;
+    border-bottom: none;
+    &:last-of-type{
+      border-bottom: 1px solid #060708;
+    }
+
+    &.is-active {
+      .faq-accordeon__answer {
+        display: block;
+      }
+
+      .faq-accordeon__question {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__question {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 28px;
+    padding: 24px 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      margin-left: 20px;
+      flex: 0 0 auto;
+    }
+  }
+
+  &__answer {
+    padding: 0 25px 23px;
+    display: none;
+    a{
+      color: $blueColor;
+    }
+
+    p + p {
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contact-form {
+  padding: 100px 0 50px;
+
+  &__link {
+    color: #060708;
+    text-decoration: underline;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    @media screen and (min-width: $screen-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      grid-column-gap: 60px;
+      grid-row-gap: 68px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      grid-column-gap: 120px;
+    }
+  }
+
+  &__description {
+    font-size: 23px;
+  }
+
+  &__form {
+    max-width: 919px;
+
+    .validation_error,
+    #validation_message_2_7 {
+      display: none;
+    }
+
+    .validation_message {
+      font-size: 10px;
+      color: red;
+      margin-top: 5px;
+      padding-left: 10px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      margin-left: -15px;
+    }
+
+    .gform_fields {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .gfield {
+      width: 100%;
+      margin-bottom: 15px;
+
+      @media screen and (min-width: $screen-md) {
+        width: 50%;
+        padding-left: 15px;
+      }
+    }
+
+    .gfield#field_2_3,
+    .gfield#field_2_7,
+    .gfield#field_2_4 {
+      width: 100%;
+    }
+
+    .gfield#field_2_7,
+    .gfield#field_2_4 {
+      margin-bottom: 31px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #060708;
+      padding: 21px 25px;
+      height: 70px;
+      font-size: 23px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input[type=checkbox] {
+      width: 18px;
+      height: 18px;
+      margin-right: 25px;
+    }
+
+    textarea {
+      height: 261px;
+      resize: none;
+      width: 100%;
+    }
+
+    .gform_footer {
+      padding-left: 15px;
+      position: relative;
+
+      .gform_ajax_spinner {
+        border: 4px solid #e7eaed;
+        border-left: 4px solid #3a56a5;
+        animation: spinner 1.1s infinite linear;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 200px;
+        top: calc(50% - 10px);
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    .gfield_required {
+      display: none;
+    }
+
+    .gform_button {
+      height: 70px;
+      width: 100%;
+      max-width: 153px;
+      font-size: 24px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      color: #fff;
+      background-color: #3a56a5;
+      text-transform: uppercase;
+      position: relative;
+
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+
+      &:hover {
+        background-color: darken(#3a56a5, 15%);
+      }
+    }
+  }
+}
